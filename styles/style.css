@@ -1,0 +1,227 @@
+:root {
+    --primary : #5d6d69;
+    --secondary : #cea18b;
+    --third : #687b76;
+    --text-color : #fdf5e2;
+    --green : #6a7c77;
+    --orange : #d68571;
+    --shadow : 0 5px 25px rgb(1, 1, 1, 0.1);
+
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--primary);
+}
+
+section {
+    position: relative;
+    margin: 0 80px;
+    transition: 0.5s ease;
+}
+
+.main-container {
+    position: relative;
+}
+
+/* Tab Navigation */
+.tab-nav-bar {
+    position: relative;
+    margin: 65px 10px 40px;
+}
+
+.tab-navigation {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: fit-content;
+}
+
+.tab-menu {
+    color: var(--text-color);
+    list-style: none;
+    background: var(--green);
+    max-width: 800px;
+    padding: 10px;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--green);
+    border-radius: 50px;
+    box-shadow: var(--shadow);
+    overflow-x: auto;
+    user-select: none;
+    scroll-behavior: smooth;
+}
+
+.tab-menu.dragging{
+    scroll-behavior: unset;
+    cursor: grab;
+}
+
+.tab-menu.dragging .tab-btn{
+    pointer-events: none;
+}
+
+.tab-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.tab-btn {
+    margin: 0 2px;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: 400;
+    display: inline-block;
+    border-radius: 50px;
+    cursor: pointer;
+    user-select: none;
+    transition: ease 0.3s;
+}
+
+.tab-btn:hover {
+    background: var(--primary);
+    box-shadow: inset var(--shadow);
+}
+
+.tab-btn.active {
+    background: #cea18b;    
+}
+
+.left-btn, .right-btn {
+    position: absolute;
+    color: var(--text-color);
+    font-size: 1.8em;
+    padding: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.left-btn {
+    left : 0;
+    background: linear-gradient(to left, transparent , var(--primary) 80%);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.right-btn {
+    right : 0;
+    background: linear-gradient(to right, transparent , var(--primary) 80%);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+/*Tab Content*/
+
+.tab-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.tab {
+    max-width: 1100px;
+    padding: 10px 50px;
+}   
+
+.tab .row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 0;
+    gap : 30px;
+}
+
+.tab .img-card {
+    position: relative;
+    width: 450px;
+    max-width: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow);
+}
+
+.tab .img-card img {
+    width: 100%;
+}
+
+.right-collumn {
+    max-width: 800px;
+}
+
+.info .breed, .info .description p {
+    margin: 10px;
+}
+
+.description {
+    padding: 0 0 20px 0;
+}
+
+.info .description p {
+    color: var(--text-color);
+}
+
+.info .breed {
+    font-size: 2em;
+}
+
+.characteristics ul {
+    border-top: 2px solid #475651;
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+}
+
+.c-tab {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.9px;
+    color: var(--text-color);
+    text-align: center;
+    background: var(--orange);
+    margin: 5px 5px;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.native {
+    color: var(--third);
+    font-size: 5em;
+    text-align: center;
+    text-shadow: var(--shadow);
+}
+
+/*
+@media (max-width : 750px) {
+
+
+    .tab-content {
+        display: block;
+    }
+
+    .tab .row {
+        display: block;
+        margin: 50px 0px;
+    }
+
+    .tab .img-card {
+        width: 100%;
+    }
+
+
+}
+*/
