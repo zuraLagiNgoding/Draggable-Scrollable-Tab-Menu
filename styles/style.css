@@ -14,7 +14,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
 
+}
 body {
   background: var(--primary);
 }
@@ -23,6 +25,11 @@ section {
   position: relative;
   margin: 0 80px;
   transition: 0.5s ease;
+}
+
+.kucing {
+  position: absolute;
+  bottom: -600px;
 }
 
 .main-container {
@@ -135,17 +142,15 @@ section {
   max-width: 1100px;
   padding: 15px 50px;
   transform: translateX(25px);
-  -webkit-transform: translateX(25px);
   content-visibility: hidden;
   opacity: 0;
 }
 
 .tab.active {
   transform: translateX(0px);
-  -webkit-transform: translateX(0px);
   content-visibility: visible;
   opacity: 1;
-  transition: 0.1 ease;
+  transition: 0.5s ease;
 }
 
 .tab .row {
@@ -194,6 +199,13 @@ section {
 
 .info .breed {
   font-size: 2em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+}
+
+.info .breed h2 {
 }
 
 .characteristics ul {
@@ -221,29 +233,65 @@ section {
 .native {
   position: relative;
   color: var(--third);
-  font-size: 5em;
+  font-size: 1em;
   text-align: center;
   text-shadow: var(--shadow);
-  bottom: -60px;
 }
 
-/*
-@media (max-width : 750px) {
 
+@media screen and (max-width : 1050px) {
 
+    body {
+      font-size: 65.5%;
+    }
+
+    section {
+      position: relative;
+      margin: 0 0px;
+    }
+
+    .tab {
+      padding: 15px 25px;
+    }
+    .tab-nav-bar {
+      margin: 65px 20px 0px 25px;
+    }
+
+    .tab-btn {
+      padding: 10px 20px;
+    }
+    
     .tab-content {
         display: block;
     }
 
     .tab .row {
-        display: block;
-        margin: 50px 0px;
+        flex-direction: column;
     }
+
 
     .tab .img-card {
         width: 100%;
+      }
+      
+      .tab .img-card img {
+      height: 100%;
     }
 
+    .c-tab {
+      font-size: 80%;
+    }
+
+    .info .breed {
+      font-size: 2.5em;
+      margin: 0;
+      padding: 0;
+      width: fit-content;
+    }
+
+    .kucing {
+      overflow: hidden;
+      bottom: -420px;
+    }
 
 }
-*/
